@@ -1,0 +1,128 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  font-family: "Playfair Display", serif;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+}
+
+.grid {
+  width: 600px;
+  height: 600px;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+}
+
+.cell {
+  width: 100%;
+  height: 100%;
+  border: 1px solid white;
+}
+
+.cell:hover {
+  cursor: pointer;
+}
+
+.cell.X,
+.cell.O {
+  cursor: not-allowed;
+}
+
+h1,
+h2 {
+  margin: 1% 0;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  padding-bottom: 2%;
+  font-size: 2.5rem;
+}
+
+.game-end {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.game-end h1 {
+  font-size: 5rem;
+  color: black;
+}
+
+.game-end button {
+  font-size: 3rem;
+  color: white;
+  background-color: black;
+  padding: 15px;
+  outline: 0;
+  border-radius: 5px;
+}
+
+.game-end button:hover {
+  color: black;
+  background-color: white;
+}
+
+.X {
+  background-image: url(./assets/Cross.png);
+  background-size: cover;
+}
+
+.O {
+  background-image: url(./assets/Nought.png);
+  background-size: cover;
+}
+
+.winScreen {
+  display: flex;
+}
+
+#winner {
+  color: black;
+}
+
+@media only screen and (max-width: 700px) {
+  .grid {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .grid {
+    width: 300px;
+    height: 300px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    padding-bottom: 2%;
+    font-size: 1.5rem;
+  }
+}
