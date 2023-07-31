@@ -15,12 +15,13 @@
   align-items: center;
   width: 100vw;
   height: 100vh;
+  min-height: 1000px;
   background-color: black;
 }
 
 .grid {
   width: 600px;
-  height: 600px;
+  min-height: 600px;
   display: grid;
   grid-template-columns: repeat(3, auto);
 }
@@ -107,14 +108,17 @@ h2 {
 @media only screen and (max-width: 700px) {
   .grid {
     width: 400px;
-    height: 400px;
+    min-height: 400px;
+  }
+  .game {
+    min-height: 600px;
   }
 }
 
 @media only screen and (max-width: 450px) {
   .grid {
     width: 300px;
-    height: 300px;
+    min-height: 300px;
   }
 
   h1 {
